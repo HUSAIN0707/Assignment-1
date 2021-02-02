@@ -6,75 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,700" rel="stylesheet">
 <script src="https://use.fontawesome.com/20df5cf3d4.js"></script><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
-<link rel='stylesheet' href='https://codepen.io/tiffanyadu/pen/OprNrV.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script>
+    // var myChart = new Chart(ctx, {...});
+</script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <body>
-	<!-- Status Bar -->
-	<div id="status">
-		<p></p>
-		<button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
-	</div>
+	<
 	<!-- Current Weather -->
 	<div id="current" class="wrapper">
-		<nav>
-			<button id="locateBtn">
-				<i class="fa fa-location-arrow" aria-hidden="true"></i>
-			</button>
-			<button id="unitBtn" data-units="f">f</button>
-		</nav>
-		<h1 class="location">Chicago, IL</h1>
-		<h2 class="date">Sunday, January 1, 2017</h2>
-		<div class="weatherIcon">
-			<div class="sunny">
-				<div class="inner"></div>
-			</div>
+		<h1 class="location"></h1>
+		<h2 class="date"></h2>
+		<div class="weatherIcon1">
+			<img src="" id="img">
 		</div>
-		<p class="temp">72</p>
-		<p class="conditions">Sunny</p>
+		<p ><span class="temp" id="high"></span> <span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span> <span id="low" class="temp"></span></p>
+		<p class="conditions"></p>
+
+		<button class="btn btn-primary" id="md">More Data</button>
+		<button class="btn btn-primary" id="ld" style="display: none">Less Data</button>
+		<div class="ext" style="display: none">
+			
+		</div>
+	</div>
+	<div style="width: 90%; margin: auto">
+		<button class="btn btn-primary" id="cd">Card View</button>
+		<button class="btn btn-light" id="cv">Chart View</button>
+
 	</div>
 	<!-- Future Forecast -->
-	<div id="future" class="wrapper">
-		<div class="container">
-			<h3 class="day">Mon</h3>
-			<div class="weatherIcon">
-				<div class="partlycloudy">
-					<div class="inner"></div>
-				</div>
-			</div>
-			<p class="conditions">Partly Cloudy</p>
-			<p class="tempRange"><span class="high">64</span> | <span class="low">48</span></p>
-		</div>
-		<div class="container">
-			<h3 class="day">Tue</h3>
-			<div class="weatherIcon">
-				<div class="mostlycloudy">
-					<div class="inner"></div>
-				</div>
-			</div>
-			<p class="conditions">Mostly Cloudy</p>
-			<p class="tempRange"><span class="high">57</span> | <span class="low">45</span></p>
-		</div>
-		<div class="container">
-			<h3 class="day">Wed</h3>
-			<div class="weatherIcon">
-				<div class="rain">
-					<div class="inner"></div>
-				</div>
-			</div>
-			<p class="conditions">Chance of Rain</p>
-			<p class="tempRange"><span class="high">63</span> | <span class="low">59</span></p>
-		</div>
+	<div style="width: 90%; margin: auto" id="chartDiv">
+	<canvas id="myChart" width="400" height="400" style="display: block; width: 1000px; height: 200px;"></canvas></div>
+	<div id="future" class="wrapper" style="display: none;">
+		
 	</div>
-	<footer>
-		<p id="lastUpdated">Last updated at 12:00pm</p>
-		<p>Created by <a href="http://tiffanydu.com/" title="Visit Portfolio Site" target="_blank">Tiffany Du</a> | Weather data from <a href="https://www.wunderground.com/" title="Wunderground.com" target="_blank">Wunderground</a></p>
-	</footer>
+
 </body>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script  src="./script.js"></script>
 
 </body>
 </html>

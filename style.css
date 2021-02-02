@@ -11,17 +11,18 @@
 	outline: none;
 }
 html, body {
-	height: 100%;
+	/*height: 100%;*/
 	width: 100%;
 }
 body {
-	color: #fff;
+	color: #000;
 	font-family: 'Alegreya Sans', sans-serif;
 	font-weight: 300;
 	position: relative;
 	letter-spacing: 0.05rem;
 	line-height: 1.5;
 	text-align: center;
+	background:radial-gradient(#E5EECC,#457BF2); 
 }
 a {
 	color: #6D8CA0;
@@ -54,7 +55,7 @@ footer {
 	Containers
 -----------------*/
 .wrapper {
-	color: #fff;
+	color: #000;
 	overflow: auto;
 	width: 100%;
 }
@@ -195,9 +196,15 @@ nav {
 }
 #future > .container {
 	border-bottom: 1px solid rgba(255,255,255,0.25);
-	margin: 0;
+	/*margin: 15px 10px;*/
 	padding: 5% 10%;
 	width: 100%;
+	/*border: 1px solid black;*/
+	background: linear-gradient(to top right,#3F76F2,#457BF2);
+	border-radius: 30px;
+	-webkit-box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.75);
 }
 #future > .container:first-child {
 	border-top: 1px solid rgba(255,255,255,0.25);
@@ -214,6 +221,10 @@ nav {
 	margin-left: 10%;
 	margin-top: -5%;
 	width: 50px;
+} 
+.weatherIcon img{
+	margin-top: -50%;
+	margin-left: -50%
 }
 #future p { text-align: left; }
 .high:after, .low:after {
@@ -264,7 +275,8 @@ nav {
 		border-bottom: none;
 		float: left;
 		padding: 20px;
-		width: 33.33%; 
+		margin: 15px 10px;
+		width: 23.33%; 
 	}
 	#future > .container:first-child { border-top: none; }
 	#future > .container:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.25); }
@@ -274,7 +286,7 @@ nav {
 		float: none;
 		height: 60px;
 		margin: 10% auto 5%;
-		width: 60px;
+		/*width: 60px;*/
 	}
 	footer { font-size: 0.9rem; }
 }
